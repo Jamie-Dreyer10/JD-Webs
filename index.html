@@ -206,7 +206,8 @@ legend{font-weight:700;padding:0;margin:0 0 10px}
 .screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:#000}
 .screen .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:14px}
 .screen iframe{position:relative;width:100%;height:100%;border:0;display:block;background:transparent}
-.phone-link{position:absolute;inset:0;z-index:3;display:none;border-radius:44px}
+.phone-tap{display:none}
+.phone-done{display:none}
 .phone-cap{margin-top:16px;color:var(--muted);font-size:14px;text-align:center}
 
 /* why */
@@ -250,9 +251,13 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
   section{padding:60px 0}
   .promo{padding:24px 22px}
   .wa{display:inline-flex}
+  .phone{height:520px}
   .screen iframe{pointer-events:none}
-  .phone-link{display:block}
-  .phone{height:560px}
+  .phone.on .screen iframe{pointer-events:auto}
+  .phone-tap{display:flex;position:absolute;inset:0;z-index:3;align-items:flex-end;justify-content:center;padding:0 0 40px;border:0;border-radius:44px;background:linear-gradient(to top,rgba(4,11,28,0.7),rgba(4,11,28,0) 45%);font:inherit;cursor:pointer}
+  .phone-tap span{background:var(--accent);color:#04122B;font-weight:800;font-size:15px;padding:12px 22px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
+  .phone.on .phone-tap{display:none}
+  .phone-col.on .phone-done{display:inline-flex;margin-top:14px}
 }
 @media (max-width: 420px){
   .pv-nav span{display:none}
@@ -543,8 +548,9 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
           <div class="ph">Loading mkickzz.co.za&hellip;</div>
           <iframe src="https://mkickzz.co.za" title="The live MKICKZ website" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
-        <a class="phone-link" href="https://mkickzz.co.za" target="_blank" rel="noopener" aria-label="Open the live MKICKZ website"></a>
+        <button class="phone-tap" type="button"><span>Tap to explore the live site</span></button>
       </div>
+      <button class="btn sm ghost phone-done" type="button">Done exploring</button>
       <p class="phone-cap">Scroll inside the phone to explore it.</p>
     </div>
   </div>
@@ -686,6 +692,16 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
           }, 240);
         }, 4500);
       }
+    }
+
+    /* phone demo: on touch screens, tap to unlock scrolling inside the phone */
+    var phCol = document.querySelector('.phone-col');
+    var ph = document.querySelector('.phone');
+    var tap = document.querySelector('.phone-tap');
+    var done = document.querySelector('.phone-done');
+    if (ph && tap && done && phCol) {
+      tap.addEventListener('click', function(){ ph.classList.add('on'); phCol.classList.add('on'); });
+      done.addEventListener('click', function(){ ph.classList.remove('on'); phCol.classList.remove('on'); });
     }
 
     /* try it: live preview driven by the visitor */
