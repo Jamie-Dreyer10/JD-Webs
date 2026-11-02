@@ -3,16 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JD Webs | Website Design for Small Businesses in Cape Town &amp; Western Cape</title>
-<meta name="description" content="JD Webs builds fast, mobile-friendly websites for small businesses in Cape Town and the Western Cape. Live in 2 to 3 business days. Websites from R3,500. Formerly JD Web Development.">
+<title>JD Webs | Website Design for Small Businesses | Cape Town &amp; South Africa</title>
+<meta name="description" content="JD Webs builds fast, mobile-friendly websites for small businesses. Based in Cape Town, working with businesses across South Africa. Live in 2 to 3 business days. Websites from R3,500.">
 <meta name="theme-color" content="#06122B">
 <link rel="canonical" href="https://jdwebs.co.za/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="JD Webs | Websites for small businesses">
-<meta property="og:description" content="Fast, mobile-friendly websites for small businesses in Cape Town and the Western Cape. Live in 2 to 3 business days.">
+<meta property="og:description" content="Fast, mobile-friendly websites for small businesses across South Africa. Based in Cape Town. Live in 2 to 3 business days.">
 <meta property="og:url" content="https://jdwebs.co.za/">
 <meta property="og:locale" content="en_ZA">
+<script>document.documentElement.className += ' js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -24,11 +25,13 @@
   "name": "JD Webs",
   "alternateName": "JD Web Development",
   "url": "https://jdwebs.co.za/",
-  "description": "Website design and development for small businesses in Cape Town and the Western Cape.",
+  "description": "Website design and development for small businesses. Based in Cape Town, working with businesses across South Africa.",
   "telephone": "+27658941650",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cape Town", "addressRegion": "Western Cape", "addressCountry": "ZA" },
   "areaServed": [
     { "@type": "City", "name": "Cape Town" },
-    { "@type": "AdministrativeArea", "name": "Western Cape" }
+    { "@type": "AdministrativeArea", "name": "Western Cape" },
+    { "@type": "Country", "name": "South Africa" }
   ],
   "knowsAbout": ["Website design", "Web development", "Google Business Profile setup", "Social media marketing"],
   "makesOffer": [
@@ -53,6 +56,7 @@ img,svg{max-width:100%}
 .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
 .skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#04122B;padding:10px 16px;z-index:100;border-radius:0 0 8px 0;font-weight:700}
 .skip:focus{left:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* header */
 header{position:sticky;top:0;z-index:50;background:rgba(4,11,28,0.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -60,7 +64,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(4,11,28,0.88);backdrop-f
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.01em}
 .brand svg{width:44px;height:auto;flex-shrink:0}
 .brand em{font-style:normal;color:var(--accent)}
-nav{display:flex;align-items:center;gap:26px}
+nav{display:flex;align-items:center;gap:24px}
 nav a.l{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
 nav a.l:hover,nav a.l:focus-visible{color:var(--text)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:2px solid var(--accent);background:var(--accent);color:#04122B;cursor:pointer;transition:transform .15s ease, background .15s ease}
@@ -74,9 +78,9 @@ nav a.l:hover,nav a.l:focus-visible{color:var(--text)}
 .hero{position:relative;overflow:hidden;background:linear-gradient(165deg,var(--bg2) 0%,var(--bg) 60%,var(--bg3) 100%);padding:72px 0 80px}
 .hero:before{content:"";position:absolute;right:-220px;top:-200px;width:640px;height:640px;border-radius:50%;background:var(--accent);opacity:.09}
 .hero:after{content:"";position:absolute;right:140px;bottom:-240px;width:420px;height:420px;border-radius:50%;border:2px solid var(--accent);opacity:.3}
-.hero .grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-.eyebrow:before{content:"";width:40px;height:4px;border-radius:2px;background:var(--accent)}
+.hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.eyebrow:before{content:"";width:40px;height:4px;border-radius:2px;background:var(--accent);flex-shrink:0}
 h1{margin:18px 0 18px;font-weight:800;font-size:clamp(40px,6vw,72px);line-height:1.04;letter-spacing:-0.03em}
 h1 span{color:var(--accent)}
 .lead{font-size:clamp(18px,2.2vw,22px);color:var(--muted);max-width:560px;margin:0 0 30px}
@@ -84,17 +88,29 @@ h1 span{color:var(--accent)}
 .ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:28px 0 0;padding:0;list-style:none;color:var(--muted);font-weight:600;font-size:15px}
 .ticks li{display:flex;align-items:center;gap:8px}
 .ticks li:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.hero-pv{display:flex;flex-direction:column;gap:14px}
+.try-link{align-self:center;color:var(--sky);font-weight:700;font-size:15px;text-decoration:none;padding:10px 6px}
+.try-link:hover{text-decoration:underline}
 
-/* browser mock */
-.mock{border:3px solid var(--accent);border-radius:20px;background:#061A38;overflow:hidden;box-shadow:10px 10px 0 rgba(31,209,214,0.28)}
-.mock .top{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#0B2A4A;border-bottom:3px solid var(--accent)}
-.dot{width:12px;height:12px;border-radius:50%}
-.addr{flex:1;margin-left:8px;background:var(--bg3);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;color:#BFD3D6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.mock .body{padding:28px 24px 30px;display:flex;flex-direction:column;gap:12px;background-image:radial-gradient(rgba(31,209,214,0.18) 2px,transparent 2.5px);background-size:24px 24px}
-.mock .tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.mock h3{margin:0;font-size:clamp(26px,3.4vw,38px);line-height:1.05;letter-spacing:-0.02em}
-.mock p{margin:0;color:#BFD3D6;font-size:15px}
-.mock .pill{align-self:flex-start;background:var(--accent);color:#04122B;border-radius:999px;padding:9px 20px;font-weight:800;font-size:14px}
+/* live preview mock */
+.pv{--pv:#1FD1D6;border:3px solid var(--pv);border-radius:20px;background:#061A38;overflow:hidden;box-shadow:10px 10px 0 rgba(31,209,214,0.28);box-shadow:10px 10px 0 color-mix(in srgb,var(--pv) 30%,transparent);transition:border-color .35s ease,box-shadow .35s ease}
+.pv .top{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#0B2A4A;border-bottom:3px solid var(--pv);transition:border-color .35s ease}
+.dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.addr{flex:1;min-width:0;margin-left:8px;background:var(--bg3);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;color:#BFD3D6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.addr [data-k="url"]{color:#fff}
+.caret{display:inline-block;width:2px;height:1em;background:var(--pv);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pv .body{padding:20px 24px 26px;display:flex;flex-direction:column;gap:12px;min-height:310px;background-image:radial-gradient(rgba(255,255,255,0.08) 2px,transparent 2.5px);background-size:24px 24px}
+.pv .body>*{transition:opacity .22s ease}
+.pv.swap .body>*{opacity:0}
+.pv-nav{display:flex;align-items:center;gap:14px;font-size:13px;color:#BFD3D6;font-weight:600;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.pv-nav b{color:#fff;font-size:15px;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+.pv .tag{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--pv)}
+.pv h3{margin:0;font-size:clamp(26px,3.2vw,36px);line-height:1.08;letter-spacing:-0.02em;overflow-wrap:anywhere}
+.pv p{margin:0;color:#BFD3D6;font-size:15px}
+.pv-list{list-style:none;padding:0;margin:2px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.pv-list li{border:1.5px solid var(--pv);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600}
+.pv .pill{align-self:flex-start;margin-top:4px;background:var(--pv);color:#04122B;border-radius:999px;padding:10px 22px;font-weight:800;font-size:14px;transition:background .35s ease}
 
 /* sections */
 section{padding:84px 0;scroll-margin-top:68px}
@@ -102,6 +118,42 @@ section.alt{background:linear-gradient(180deg,#071733 0%,var(--bg3) 100%)}
 .kicker{font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
 h2{margin:0 0 14px;font-weight:800;font-size:clamp(30px,4.4vw,48px);line-height:1.1;letter-spacing:-0.02em}
 .sub{color:var(--muted);font-size:18px;max-width:640px;margin:0 0 40px}
+
+/* try it */
+.try{display:grid;grid-template-columns:.9fr 1.1fr;grid-template-areas:"head pv" "ctl pv";gap:8px 56px;align-items:start}
+.try-head{grid-area:head}
+.try-head .sub{margin-bottom:28px}
+.try .pv{grid-area:pv;align-self:center}
+.ctl{grid-area:ctl}
+.ctl label.f{display:block;font-weight:700;margin:0 0 10px}
+.ctl input[type="text"]{width:100%;min-height:54px;padding:0 18px;border-radius:14px;border:2px solid var(--line);background:rgba(255,255,255,0.06);color:#fff;font:inherit;font-size:17px;font-weight:600}
+.ctl input[type="text"]::placeholder{color:#8296AE}
+.ctl input[type="text"]:focus{outline:none;border-color:var(--accent)}
+fieldset{border:0;padding:0;margin:22px 0 0;min-width:0}
+legend{font-weight:700;padding:0;margin:0 0 10px}
+.chips,.sw{position:relative;display:flex;flex-wrap:wrap;gap:8px}
+.chips input,.sw input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chips label{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:2px solid var(--line);border-radius:999px;font-weight:700;font-size:15px;cursor:pointer;transition:background .15s,border-color .15s}
+.chips label:hover{border-color:var(--accent)}
+.chips input:checked+label{background:var(--accent);border-color:var(--accent);color:#04122B}
+.sw label{width:44px;height:44px;border-radius:50%;cursor:pointer;border:3px solid transparent;box-shadow:inset 0 0 0 3px var(--bg)}
+.sw input:checked+label{border-color:#fff}
+.chips input:focus-visible+label,.sw input:focus-visible+label{outline:3px solid var(--sky);outline-offset:3px}
+.ctl .btn{margin-top:28px}
+.ctl small{display:block;margin-top:12px;color:var(--muted);font-size:14px}
+
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cmp>div{border-radius:22px;padding:28px 28px 30px}
+.cmp h3{margin:0 0 16px;font-size:22px}
+.cmp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;font-size:16px;font-weight:600}
+.cmp li{display:flex;gap:12px;align-items:flex-start}
+.cmp li:before{flex-shrink:0;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:800;margin-top:-1px}
+.cmp-no{border:1px solid var(--line);background:rgba(255,255,255,0.02)}
+.cmp-no li{color:var(--muted)}
+.cmp-no li:before{content:"\2715";background:rgba(255,122,122,0.14);color:#FF8C8C}
+.cmp-yes{border:2px solid var(--accent);background:rgba(31,209,214,0.07)}
+.cmp-yes li:before{content:"\2713";background:var(--accent);color:#04122B}
 
 /* promo */
 .promo{margin:0 0 40px;border:2px solid var(--accent);border-radius:24px;background:linear-gradient(120deg,rgba(31,209,214,0.14),rgba(155,107,255,0.14));padding:28px 30px;display:flex;flex-wrap:wrap;gap:20px 36px;align-items:center;justify-content:space-between}
@@ -126,6 +178,12 @@ h2{margin:0 0 14px;font-weight:800;font-size:clamp(30px,4.4vw,48px);line-height:
 .card .btn{margin-top:auto}
 .note{margin:26px 0 0;color:var(--muted);font-size:15px}
 
+/* risk-free band */
+.band{padding:60px 0;background:linear-gradient(120deg,rgba(31,209,214,0.16),rgba(155,107,255,0.18));border-block:1px solid var(--line)}
+.band-in{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between}
+.band h2{margin:0 0 10px}
+.band p{margin:0;color:var(--muted);font-size:18px;max-width:600px}
+
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s;padding:0;margin:0;list-style:none}
 .steps li{counter-increment:s;border-top:3px solid var(--accent);padding:20px 4px 0}
@@ -134,11 +192,22 @@ h2{margin:0 0 14px;font-weight:800;font-size:clamp(30px,4.4vw,48px);line-height:
 .steps p{margin:0;color:var(--muted);font-size:15px}
 
 /* work */
-.work{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.work{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .work p{color:var(--muted);font-size:17px}
 .work ul{padding:0;margin:18px 0 26px;list-style:none;display:flex;flex-direction:column;gap:10px;font-weight:600}
 .work li{display:flex;gap:10px}
 .work li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px;flex-shrink:0}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.live i{width:10px;height:10px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.6)}70%{box-shadow:0 0 0 10px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+.phone-col{display:flex;flex-direction:column;align-items:center}
+.phone{position:relative;width:300px;max-width:100%;height:600px;border-radius:44px;padding:30px 12px 22px;background:#0B1730;border:2px solid rgba(255,255,255,0.18);box-shadow:0 30px 60px rgba(0,0,0,0.5),0 0 0 6px rgba(31,209,214,0.14)}
+.phone:before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:70px;height:6px;border-radius:3px;background:rgba(255,255,255,0.18)}
+.screen{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;background:#000}
+.screen .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:14px}
+.screen iframe{position:relative;width:100%;height:100%;border:0;display:block;background:transparent}
+.phone-link{position:absolute;inset:0;z-index:3;display:none;border-radius:44px}
+.phone-cap{margin-top:16px;color:var(--muted);font-size:14px;text-align:center}
 
 /* why */
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
@@ -159,25 +228,41 @@ details p{margin:0 0 20px;color:var(--muted);max-width:660px}
 .contact{text-align:center;background:linear-gradient(165deg,var(--bg2) 0%,var(--bg) 100%);border-top:1px solid var(--line)}
 .contact h2{font-size:clamp(34px,5vw,56px)}
 .contact .sub{margin:0 auto 30px}
-.phone{display:inline-block;margin-top:22px;font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.01em;text-decoration:none;color:var(--accent)}
-.phone:hover{text-decoration:underline}
+.phone-num{display:inline-block;margin-top:22px;font-size:clamp(28px,5vw,44px);font-weight:800;letter-spacing:-0.01em;text-decoration:none;color:var(--accent)}
+.phone-num:hover{text-decoration:underline}
 
 footer{padding:34px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between}
 
-.wa{position:fixed;right:18px;bottom:18px;z-index:60;display:none}
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;display:none;box-shadow:0 8px 24px rgba(0,0,0,0.45)}
 
-@media (max-width: 860px){
-  .hero{padding:48px 0 56px}
+/* scroll reveal (only when JS runs) */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width: 900px){
+  .hero{padding:44px 0 56px}
   .hero .grid,.work{grid-template-columns:1fr}
+  .try{grid-template-columns:1fr;grid-template-areas:"head" "pv" "ctl";gap:24px}
+  .try-head .sub{margin-bottom:0}
+  .cmp{grid-template-columns:1fr}
   nav a.l{display:none}
   section{padding:60px 0}
   .promo{padding:24px 22px}
   .wa{display:inline-flex}
+  .screen iframe{pointer-events:none}
+  .phone-link{display:block}
+  .phone{height:560px}
+}
+@media (max-width: 420px){
+  .pv-nav span{display:none}
+  .pv .body{padding:18px 18px 22px;min-height:290px}
 }
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
-  .btn{transition:none}
+  .btn,.pv,.pv .top,.pv .body>*,.pv .pill{transition:none}
+  .caret,.live i{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
 }
 </style>
 </head>
@@ -210,7 +295,8 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
       <span>JD <em>Webs</em></span>
     </a>
     <nav aria-label="Main">
-      <a class="l" href="#services">Services</a>
+      <a class="l" href="#try">Try it</a>
+      <a class="l" href="#services">Prices</a>
       <a class="l" href="#how">How it works</a>
       <a class="l" href="#work">Our work</a>
       <a class="l" href="#faq">FAQ</a>
@@ -222,15 +308,15 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
 <main id="main">
 <div id="top"></div>
 
-<section class="hero" style="padding-top:72px" aria-label="Introduction">
+<section class="hero" aria-label="Introduction">
   <div class="wrap grid">
     <div>
-      <div class="eyebrow">Cape Town &amp; Western Cape</div>
+      <div class="eyebrow">Cape Town based &middot; Building across South Africa</div>
       <h1>Get your business <span>online.</span></h1>
-      <p class="lead">Fast, mobile-friendly websites for small businesses. Simple pricing, plain English and WhatsApp support, from first chat to going live.</p>
+      <p class="lead">Fast, mobile-friendly websites for small businesses, wherever you are in South Africa. Simple pricing, plain English and WhatsApp support, from first chat to going live.</p>
       <div class="cta">
         <a class="btn" data-wa data-msg="Hi JD Webs, I'd like a website for my business." href="https://wa.me/27658941650">Start on WhatsApp</a>
-        <a class="btn ghost" href="#services">See prices</a>
+        <a class="btn ghost" href="#try">See your site in 5 seconds</a>
       </div>
       <ul class="ticks">
         <li>Live in 2 to 3 business days</li>
@@ -238,28 +324,118 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
         <li>Websites from R3,500</li>
       </ul>
     </div>
-    <div class="mock" aria-hidden="true">
+    <div class="hero-pv">
+      <div class="pv" id="pv1" aria-hidden="true">
+        <div class="top">
+          <span class="dot" style="background:#fff"></span><span class="dot" style="background:#1FD1D6"></span><span class="dot" style="background:#9B6BFF"></span>
+          <div class="addr"><span data-k="url">capegrill</span>.co.za<i class="caret"></i></div>
+        </div>
+        <div class="body">
+          <div class="pv-nav"><b data-k="logo">Cape Grill</b><span>Services</span><span>Prices</span><span>Contact</span></div>
+          <div class="tag" data-k="tag">Now taking orders</div>
+          <h3 data-k="head">Cape Grill: good food, made fresh.</h3>
+          <p data-k="sub">Your menu, hours and orders, right on their phone.</p>
+          <ul class="pv-list" data-k="list"><li>Menu &amp; prices</li><li>Opening hours</li><li>Order on WhatsApp</li></ul>
+          <div class="pill" data-k="btn">Order on WhatsApp</div>
+        </div>
+      </div>
+      <a class="try-link" href="#try">Try it with your business name &darr;</a>
+    </div>
+  </div>
+</section>
+
+<section id="try" class="alt" aria-labelledby="try-h">
+  <div class="wrap try">
+    <div class="try-head">
+      <p class="kicker">Try it now</p>
+      <h2 id="try-h">See your website in 5 seconds.</h2>
+      <p class="sub">Type your business name, pick what you do and choose a colour. This is a quick sketch. Your real site is built around your business, your photos and your prices.</p>
+    </div>
+
+    <div class="pv rv" id="pv2" role="region" aria-label="Live preview of your website" aria-live="polite">
       <div class="top">
         <span class="dot" style="background:#fff"></span><span class="dot" style="background:#1FD1D6"></span><span class="dot" style="background:#9B6BFF"></span>
-        <div class="addr">yourbusiness.co.za</div>
+        <div class="addr"><span data-k="url">yourbusiness</span>.co.za<i class="caret"></i></div>
       </div>
       <div class="body">
-        <div class="tag">Your business, online</div>
-        <h3>Customers find you. Customers book you.</h3>
-        <p>Your services, prices, photos and a WhatsApp button, all in one clean site that works on any phone.</p>
-        <div class="pill">Book on WhatsApp</div>
+        <div class="pv-nav"><b data-k="logo">Your Business</b><span>Services</span><span>Prices</span><span>Contact</span></div>
+        <div class="tag" data-k="tag">Now taking orders</div>
+        <h3 data-k="head">Your Business: good food, made fresh.</h3>
+        <p data-k="sub">Your menu, hours and orders, right on their phone.</p>
+        <ul class="pv-list" data-k="list"><li>Menu &amp; prices</li><li>Opening hours</li><li>Order on WhatsApp</li></ul>
+        <div class="pill" data-k="btn">Order on WhatsApp</div>
+      </div>
+    </div>
+
+    <form class="ctl" id="ctl" autocomplete="off" onsubmit="return false">
+      <label class="f" for="bn">Your business name</label>
+      <input id="bn" type="text" maxlength="30" placeholder="e.g. Sam's Towing">
+
+      <fieldset>
+        <legend>What do you do?</legend>
+        <div class="chips">
+          <input type="radio" name="bt" id="bt-food" value="food" checked><label for="bt-food">Restaurant</label>
+          <input type="radio" name="bt" id="bt-towing" value="towing"><label for="bt-towing">Towing</label>
+          <input type="radio" name="bt" id="bt-beauty" value="beauty"><label for="bt-beauty">Salon &amp; beauty</label>
+          <input type="radio" name="bt" id="bt-trades" value="trades"><label for="bt-trades">Trades</label>
+          <input type="radio" name="bt" id="bt-shop" value="shop"><label for="bt-shop">Shop</label>
+          <input type="radio" name="bt" id="bt-other" value="other"><label for="bt-other">Something else</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pick a colour</legend>
+        <div class="sw">
+          <input type="radio" name="bc" id="bc-1" value="#1FD1D6" checked><label for="bc-1" style="background:#1FD1D6"><span class="sr">Teal</span></label>
+          <input type="radio" name="bc" id="bc-2" value="#FF8A3D"><label for="bc-2" style="background:#FF8A3D"><span class="sr">Orange</span></label>
+          <input type="radio" name="bc" id="bc-3" value="#FF5FA2"><label for="bc-3" style="background:#FF5FA2"><span class="sr">Pink</span></label>
+          <input type="radio" name="bc" id="bc-4" value="#3DDC84"><label for="bc-4" style="background:#3DDC84"><span class="sr">Green</span></label>
+          <input type="radio" name="bc" id="bc-5" value="#FFC21A"><label for="bc-5" style="background:#FFC21A"><span class="sr">Gold</span></label>
+          <input type="radio" name="bc" id="bc-6" value="#9B6BFF"><label for="bc-6" style="background:#9B6BFF"><span class="sr">Violet</span></label>
+        </div>
+      </fieldset>
+
+      <a class="btn" id="tryCta" href="https://wa.me/27658941650" target="_blank" rel="noopener">I want the real one</a>
+      <small>Opens WhatsApp with your preview details filled in.</small>
+    </form>
+  </div>
+</section>
+
+<section aria-labelledby="cmp-h">
+  <div class="wrap">
+    <p class="kicker">Why it matters</p>
+    <h2 id="cmp-h">Your customers are already searching.</h2>
+    <p class="sub">When people need what you sell, they look it up on their phone first. Be the business they find.</p>
+    <div class="cmp rv">
+      <div class="cmp-no">
+        <h3>Without a website</h3>
+        <ul>
+          <li>Hard to find when people search on Google</li>
+          <li>You answer the same questions over and over</li>
+          <li>You look smaller than you really are</li>
+          <li>Customers pick the business that does have a site</li>
+        </ul>
+      </div>
+      <div class="cmp-yes">
+        <h3>With JD Webs</h3>
+        <ul>
+          <li>Set up to show up when people search</li>
+          <li>Prices, hours and services answered day and night</li>
+          <li>A professional look from day one</li>
+          <li>Enquiries land straight in your WhatsApp</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services" aria-labelledby="services-h">
+<section id="services" class="alt" aria-labelledby="services-h">
   <div class="wrap">
     <p class="kicker">Services &amp; pricing</p>
     <h2 id="services-h">Clear prices. No surprises.</h2>
     <p class="sub">Every project is different, so prices start from the amounts below. We confirm your exact price on WhatsApp before any work starts.</p>
 
-    <div class="promo">
+    <div class="promo rv">
       <div>
         <span class="badge">Black Friday special &middot; November 2026</span>
         <h3>Complete website for R2,950</h3>
@@ -270,7 +446,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
     </div>
 
     <div class="cards">
-      <article class="card feat">
+      <article class="card feat rv">
         <h3>Business website</h3>
         <div><div class="from">from</div><div class="amt">R3,500</div></div>
         <p>A professional website that looks great on any phone.</p>
@@ -283,7 +459,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
         <a class="btn" data-wa data-msg="Hi JD Webs, I'd like a quote for a business website." href="https://wa.me/27658941650">Ask about this</a>
       </article>
 
-      <article class="card">
+      <article class="card rv">
         <h3>Website care &amp; updates</h3>
         <div><div class="from">per month</div><div class="amt">R400<span> /month</span></div></div>
         <p>Keep your site fresh without lifting a finger.</p>
@@ -295,7 +471,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
         <a class="btn ghost" data-wa data-msg="Hi JD Webs, I'd like to know more about website care and updates." href="https://wa.me/27658941650">Ask about this</a>
       </article>
 
-      <article class="card">
+      <article class="card rv">
         <h3>Social media marketing</h3>
         <div><div class="from">from</div><div class="amt">R500</div></div>
         <p>Posts and content to help more customers find and remember you.</p>
@@ -306,7 +482,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
         <a class="btn ghost" data-wa data-msg="Hi JD Webs, I'd like to know more about social media marketing." href="https://wa.me/27658941650">Ask about this</a>
       </article>
 
-      <article class="card">
+      <article class="card rv">
         <h3>More services</h3>
         <div><div class="from">Quote on request</div></div>
         <p>Not sure what you need? Ask. We keep it simple.</p>
@@ -321,12 +497,23 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
   </div>
 </section>
 
-<section id="how" class="alt" aria-labelledby="how-h">
+<section class="band" aria-labelledby="band-h">
+  <div class="wrap band-in">
+    <div>
+      <p class="kicker">Zero risk</p>
+      <h2 id="band-h">Only pay the rest when you love it.</h2>
+      <p>You pay half to start. Then you preview your site, we tweak it until it feels right, and only then do you pay the second half.</p>
+    </div>
+    <a class="btn" data-wa data-msg="Hi JD Webs, I'd like to get started on my website." href="https://wa.me/27658941650">Start on WhatsApp</a>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
   <div class="wrap">
     <p class="kicker">How it works</p>
     <h2 id="how-h">From first message to live in days.</h2>
-    <p class="sub">No long meetings and no jargon. Most of it happens on WhatsApp.</p>
-    <ol class="steps">
+    <p class="sub">No long meetings and no jargon. Most of it happens on WhatsApp, so it works wherever you are.</p>
+    <ol class="steps rv">
       <li><h3>Chat on WhatsApp</h3><p>Tell us about your business, your services and what you want your site to do.</p></li>
       <li><h3>Pay half to start</h3><p>Half upfront and we begin building your site.</p></li>
       <li><h3>Preview your site</h3><p>See your site before you pay the second half. We adjust it until it feels right.</p></li>
@@ -335,12 +522,12 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
   </div>
 </section>
 
-<section id="work" aria-labelledby="work-h">
+<section id="work" class="alt" aria-labelledby="work-h">
   <div class="wrap work">
     <div>
       <p class="kicker">Our work</p>
       <h2 id="work-h">MKICKZ Sneaker Laundry Service</h2>
-      <p>A full website for a sneaker cleaning business, built from scratch and now live on its own .co.za domain.</p>
+      <p>A full website for a sneaker cleaning business, built from scratch and live on its own .co.za domain. That phone is not a picture. It is the real site, running live.</p>
       <ul>
         <li>Prices and services laid out clearly</li>
         <li>Before and after slider showing real results</li>
@@ -349,27 +536,26 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
       </ul>
       <a class="btn" href="https://mkickzz.co.za" target="_blank" rel="noopener">Visit mkickzz.co.za</a>
     </div>
-    <div class="mock" aria-hidden="true">
-      <div class="top">
-        <span class="dot" style="background:#fff"></span><span class="dot" style="background:#1FD1D6"></span><span class="dot" style="background:#9B6BFF"></span>
-        <div class="addr">mkickzz.co.za</div>
+    <div class="phone-col rv">
+      <div class="live"><i></i>Live site</div>
+      <div class="phone">
+        <div class="screen">
+          <div class="ph">Loading mkickzz.co.za&hellip;</div>
+          <iframe src="https://mkickzz.co.za" title="The live MKICKZ website" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+        <a class="phone-link" href="https://mkickzz.co.za" target="_blank" rel="noopener" aria-label="Open the live MKICKZ website"></a>
       </div>
-      <div class="body">
-        <div class="tag">Built by JD Webs</div>
-        <h3>Sneaker Laundry Service</h3>
-        <p>Prices, before and afters, and booking on WhatsApp.</p>
-        <div class="pill">Book on WhatsApp</div>
-      </div>
+      <p class="phone-cap">Scroll inside the phone to explore it.</p>
     </div>
   </div>
 </section>
 
-<section class="alt" aria-labelledby="why-h">
+<section aria-labelledby="why-h">
   <div class="wrap">
     <p class="kicker">Why JD Webs</p>
     <h2 id="why-h">Built around small businesses.</h2>
     <p class="sub">We know you are busy. So we keep everything quick, clear and honest.</p>
-    <div class="why">
+    <div class="why rv">
       <div><h3>Preview first</h3><p>You see your site before you pay the second half.</p></div>
       <div><h3>Fast turnaround</h3><p>Most sites are ready in 2 to 3 business days.</p></div>
       <div><h3>Plain English</h3><p>Clear prices, clear steps and no hidden fees.</p></div>
@@ -378,7 +564,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
   </div>
 </section>
 
-<section id="faq" aria-labelledby="faq-h">
+<section id="faq" class="alt" aria-labelledby="faq-h">
   <div class="wrap">
     <p class="kicker">FAQ</p>
     <h2 id="faq-h">Good questions.</h2>
@@ -388,7 +574,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
       <details><summary>How do I pay?</summary><p>Half to start, and the second half once you are happy with the finished site.</p></details>
       <details><summary>What is the monthly fee?</summary><p>Website care is R400 a month. It covers hosting, unlimited updates, and visitor analytics and reports. With the Black Friday special the first 2 months are free.</p></details>
       <details><summary>Do I need my own domain?</summary><p>A domain (like yourbusiness.co.za) makes you look professional and easier to find. It usually costs about R100 a year, and we can help you buy it and connect it.</p></details>
-      <details><summary>Do you work outside Cape Town?</summary><p>Yes. We are based in the Western Cape, but everything is done online, so we can help businesses across South Africa.</p></details>
+      <details><summary>Do you only work in Cape Town?</summary><p>No. We are based in Cape Town, but everything is done online and on WhatsApp, so we build websites for businesses anywhere in South Africa.</p></details>
     </div>
   </div>
 </section>
@@ -399,7 +585,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
     <h2 id="contact-h">Ready to get online?</h2>
     <p class="sub">Send us a WhatsApp message and we will reply with next steps and your exact price.</p>
     <a class="btn" data-wa data-msg="Hi JD Webs, I'd like a website for my business." href="https://wa.me/27658941650">Message us on WhatsApp</a><br>
-    <a class="phone" href="tel:+27658941650">065 894 1650</a>
+    <a class="phone-num" href="tel:+27658941650">065 894 1650</a>
   </div>
 </section>
 </main>
@@ -407,21 +593,124 @@ footer .row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify
 <footer>
   <div class="wrap row">
     <div>&copy; <span id="yr">2026</span> JD Webs. Formerly JD Web Development.</div>
-    <div>Cape Town &amp; Western Cape, South Africa</div>
+    <div>Based in Cape Town. Building websites across South Africa.</div>
   </div>
 </footer>
 
-<a class="btn wa" data-wa data-msg="Hi JD Webs, I'd like a website for my business." href="https://wa.me/27658941650" aria-label="Message JD Webs on WhatsApp">WhatsApp us</a>
 
 <script>
 (function(){
-  var y=document.getElementById('yr'); if(y){y.textContent=new Date().getFullYear();}
-  var links=document.querySelectorAll('a[data-wa]');
-  for(var i=0;i<links.length;i++){
-    var a=links[i], m=a.getAttribute('data-msg');
-    if(m){a.href='https://wa.me/27658941650?text='+encodeURIComponent(m);}
-    a.target='_blank'; a.rel='noopener';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll reveal first, so content can never stay hidden */
+  var rv = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    rv.forEach(function(el){ io.observe(el); });
+  } else {
+    rv.forEach(function(el){ el.classList.add('in'); });
   }
+
+  try {
+    var WA = '27658941650';
+    function wa(msg){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg); }
+
+    var y = document.getElementById('yr'); if (y) { y.textContent = new Date().getFullYear(); }
+    document.querySelectorAll('a[data-wa]').forEach(function(a){
+      var m = a.getAttribute('data-msg');
+      if (m) { a.href = wa(m); }
+      a.target = '_blank'; a.rel = 'noopener';
+    });
+
+    var T = {
+      food:   { label:'Restaurant',     tag:'Now taking orders',         head:'{n}: good food, made fresh.',  sub:'Your menu, hours and orders, right on their phone.',  list:['Menu & prices','Opening hours','Order on WhatsApp'], btn:'Order on WhatsApp' },
+      towing: { label:'Towing',         tag:'24/7 roadside help',        head:'Stuck? {n} is on the way.',    sub:'The areas you cover, your rates and one-tap calling.', list:['Towing & recovery','Areas covered','Call now'],       btn:'Call for a tow' },
+      beauty: { label:'Salon & beauty', tag:'Book your next look',       head:'{n}: look good, feel good.',   sub:'Treatments, prices and bookings in one place.',       list:['Treatments & prices','Gallery','Book online'],      btn:'Book an appointment' },
+      trades: { label:'Trades',         tag:'Quality work, fair prices', head:'{n} gets the job done.',       sub:'Your services, past jobs and quick quotes.',          list:['Services','Past projects','Quotes'],                btn:'Get a quote' },
+      shop:   { label:'Shop',           tag:'New stock in',              head:'Shop {n} from anywhere.',      sub:'Products, prices and delivery info, open 24/7.',      list:['Products','Delivery','Order on WhatsApp'],          btn:'Order now' },
+      other:  { label:'Business',       tag:'Open for business',         head:'{n}: here to help.',           sub:'Who you are, what you do and how to reach you.',      list:['Services','About us','Contact'],                   btn:'Get in touch' }
+    };
+
+    function slug(n){
+      var s = (n || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
+      return (s || 'yourbusiness').slice(0, 24);
+    }
+    function q(r, k){ return r.querySelector('[data-k="' + k + '"]'); }
+    function render(r, s){
+      var t = T[s.type] || T.food;
+      var n = (s.name || '').trim() || 'Your Business';
+      r.style.setProperty('--pv', s.color);
+      q(r, 'url').textContent = slug(s.name);
+      q(r, 'logo').textContent = n;
+      q(r, 'tag').textContent = t.tag;
+      q(r, 'head').textContent = t.head.replace('{n}', n);
+      q(r, 'sub').textContent = t.sub;
+      q(r, 'btn').textContent = t.btn;
+      var ul = q(r, 'list');
+      while (ul.firstChild) { ul.removeChild(ul.firstChild); }
+      t.list.forEach(function(x){ var li = document.createElement('li'); li.textContent = x; ul.appendChild(li); });
+    }
+
+    /* hero: cycles through example businesses, typing the address */
+    var hero = document.getElementById('pv1');
+    var demos = [
+      { name:'Cape Grill',      type:'food',   color:'#FF8A3D' },
+      { name:'Rapid Recovery',  type:'towing', color:'#1FD1D6' },
+      { name:'Glow Studio',     type:'beauty', color:'#FF5FA2' },
+      { name:'Fix-It Plumbing', type:'trades', color:'#3DDC84' }
+    ];
+    var typer = null;
+    function typeUrl(el, text){
+      if (typer) { clearInterval(typer); typer = null; }
+      el.textContent = '';
+      var i = 0;
+      typer = setInterval(function(){
+        i++; el.textContent = text.slice(0, i);
+        if (i >= text.length) { clearInterval(typer); typer = null; }
+      }, 70);
+    }
+    if (hero) {
+      render(hero, demos[0]);
+      if (!reduce) {
+        var di = 0;
+        setInterval(function(){
+          di = (di + 1) % demos.length;
+          var d = demos[di];
+          hero.classList.add('swap');
+          setTimeout(function(){
+            render(hero, d);
+            typeUrl(q(hero, 'url'), slug(d.name));
+            hero.classList.remove('swap');
+          }, 240);
+        }, 4500);
+      }
+    }
+
+    /* try it: live preview driven by the visitor */
+    var pv = document.getElementById('pv2');
+    var bn = document.getElementById('bn');
+    var cta = document.getElementById('tryCta');
+    function cur(){
+      var t = document.querySelector('input[name="bt"]:checked');
+      var c = document.querySelector('input[name="bc"]:checked');
+      return { name: bn.value, type: t ? t.value : 'food', color: c ? c.value : '#1FD1D6' };
+    }
+    function upd(){
+      var s = cur();
+      render(pv, s);
+      var n = s.name.trim();
+      cta.href = wa(n
+        ? 'Hi JD Webs, I just made a preview on your website for ' + n + ' (' + T[s.type].label + '). I would like the real website.'
+        : 'Hi JD Webs, I would like a website for my business.');
+    }
+    if (pv && bn && cta) {
+      bn.addEventListener('input', upd);
+      document.querySelectorAll('#ctl input[type="radio"]').forEach(function(r){ r.addEventListener('change', upd); });
+      upd();
+    }
+  } catch (e) {}
 })();
 </script>
 </body>
